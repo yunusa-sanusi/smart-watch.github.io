@@ -1,78 +1,69 @@
-body {
-  margin: 0;
-  overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-h2 {
+body {
+  margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 1px;
 }
 
 #header {
-  width: 100%;
   background-color: #233d53;
   text-align: center;
-  padding: 10px;
+  padding: 24px 0 12px 0;
 }
 
 #site-logo {
-  width: 120px;
-  margin-top: 14px;
+  width: 8%;
 }
 
 #main-content {
+  padding: 40px;
   display: flex;
-  width: 70%;
-  height: 100vh;
-  margin-top: 16px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-#time-block {
-  position: absolute;
-  top: 285px;
-  left: 345px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 23px;
 }
 
 #smartwatch-skin {
-  width: 400px;
+  width: 500px;
+}
+
+#time-block {
+  text-align: center;
+  width: 10%;
+  position: absolute;
+  top: 350px;
+  left: 220px;
+  color: white;
+  font-size: 24px;
 }
 
 #heartbeat {
+  font-size: 30px;
+  margin-bottom: 0;
+  position: relative;
+  top: -55px;
   color: red;
-  font-size: 45px;
-  position: absolute;
-  top: 260px;
-  left: 385px;
   display: none;
 }
 
 #num-rate {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
-  position: absolute;
-  top: 290px;
-  left: 390px;
-  color: white;
+  margin-top: 0;
+  position: relative;
+  top: -50px;
   display: none;
 }
 
+/* Section Tag */
 #watch-heading {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 38px;
-  letter-spacing: 2px;
+  font-size: 35px;
   margin-bottom: 0;
 }
 
 #description {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: rgb(100, 98, 98);
-  font-size: 14px;
+  margin-top: 5px;
+  font-size: 15px;
+  width: 70%;
 }
 
 #color-block {
@@ -99,201 +90,169 @@ h2 {
   background-color: #8a5362;
 }
 
-#heart-rate {
-  margin-left: 8px;
-}
-
 #btn-buynow {
   background-color: rgb(255, 136, 0);
-  margin-top: 24px;
-  padding: 10px 16px;
-  border: none;
   border-radius: 4px;
+  border: none;
+  padding: 10px 16px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 500;
   cursor: pointer;
 }
 
+#btn-buynow:hover {
+  transform: scale(1.1);
+}
+
 .col-block {
-  width: 50px;
-  height: 40px;
-  border: 1px solid black;
-  border-radius: 4px;
+  padding: 18px 24px;
   margin-right: 16px;
+  border-radius: 4px;
+  border: 1px solid #23211f;
 }
 
 .feature-class {
   background-color: rgb(226, 225, 225);
-  padding: 10px 16px;
   border-radius: 4px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  font-size: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 8px;
   cursor: pointer;
 }
 
-
-
+.feature-class:hover {
+  background-color: #ccc;
+}
 
 @media(max-width: 1024px) {
   #time-block {
-    position: absolute;
-    left: 295px;
+    width: 15%;
+    top: 340px;
+    left: 215px;
   }
 
-  #heartbeat {
-    position: absolute;
-    left: 335px;
+  #site-logo {
+    width: 10%;
   }
 
-  #num-rate {
-    position: absolute;
-    left: 340px;
+  #description {
+    width: 80%;
   }
 }
 
 @media(max-width: 768px) {
   #main-content {
+    flex-direction: column;
+  }
+
+  #site-logo {
+    width: 12%;
+  }
+
+  #img-time-block {
     width: 100%;
+    text-align: center;
   }
 
   #time-block {
-    position: absolute;
-    top: 270px;
-    left: 145px;
-  }
-
-  #heartbeat {
-    position: absolute;
-    top: 240px;
-    left: 180px;
-  }
-
-  #num-rate {
-    position: absolute;
-    top: 270px;
-    left: 185px;
+    top: 350px;
+    left: 320px;
   }
 }
 
-@media(max-width: 600px) {
-  #main-content {
-    width: 100%;
-    flex-direction: column;
-    /* overflow: hidden; */
-  }
-
-  #header {
-    box-sizing: border-box;
-  }
-
-  #left-side {
-    text-align: center;
-    width: 100%;
-  }
-
-  #watch-desc {
-    width: 100%;
-  }
-
-  #time-block {
-    position: absolute;
-    top: 270px;
-    left: 240px;
-  }
-
+@media(min-width: 768px) {
   #heartbeat {
-    position: absolute;
-    top: 240px;
-    left: 280px;
+    font-size: 40px;
   }
 
   #num-rate {
-    position: absolute;
-    top: 270px;
-    left: 285px;
+    font-size: 30px;
   }
 }
 
 @media(max-width: 425px) {
   #main-content {
-    width: 95%;
+    padding: 24px;
   }
 
-  #header {
-    box-sizing: border-box;
+  #site-logo {
+    width: 16%;
   }
 
-  #left-side {
-    width: 100%;
+  #watch-heading {
+    margin-top: 0;
   }
 
-  #watch-desc {
-    width: 100%;
+  #smartwatch-skin {
+    width: 380px;
   }
 
   #time-block {
-    position: absolute;
-    top: 270px;
-    left: 155px;
-  }
-
-  #heartbeat {
-    position: absolute;
-    top: 240px;
-    left: 190px;
-  }
-
-  #num-rate {
-    position: absolute;
-    top: 270px;
-    left: 195px;
+    width: 25%;
+    top: 265px;
+    left: 160px;
   }
 }
 
 @media(max-width: 375px) {
-  #header {
-    box-sizing: unset;
-    padding-right: 69.5px;
+  #main-content {
+    padding: 18px;
+  }
+
+  #site-logo {
+    width: 18%;
+  }
+
+  #watch-heading {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  #description {
+    width: 100%;
   }
 
   #smartwatch-skin {
-    text-align: center;
-  }
- 
-  #main-content {
-    width: 100%;
-    padding-right: 79.5px;
-  }
-
-  #left-side {
-    width: 100%;
-    /* padding-right: 80px; */
-  }
-
-  #watch-desc {
-    width: 100%;
-    padding-left: 16px;
+    width: 355px;
   }
 
   #time-block {
-    position: absolute;
+    width: 30%;
+    top: 245px;
     left: 140px;
-  }
-
-  #heartbeat {
-    position: absolute;
-    left: 175px;
-  }
-
-  #num-rate {
-    position: absolute;
-    left: 180px;
   }
 }
 
+@media(max-width: 320px) {
+  #main-content {
+    padding: 10px;
+  }
 
+  #site-logo {
+    width: 22%;
+  }
 
-/* This contains a web page built with HTML, CSS and JavaScript. It simulates a smart watch, displays time and heart rate. */
+  #smartwatch-skin {
+    width: 310px;
+  }
+
+  #time-block {
+    width: 35%;
+    font-size: 22px;
+    top: 220px;
+    left: 110px;
+  }
+
+  #color-block {
+    padding-right: 20px;
+  }
+
+  #watch-heading {
+    font-size: 25px;
+  }
+
+  .col-block {
+    margin-right: 10px;
+  }
+}

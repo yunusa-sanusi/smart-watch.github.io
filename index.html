@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
   <title>Smart Watch Showcase</title>
@@ -16,17 +14,22 @@
 
   <main id="main-content">
     <aside id="left-side">
-      <div id="time-block">
-        <span id="hour">23</span>
-        <span class="colon">:</span>
-        <span id="minute">59</span>
-        <span class="colon">:</span>
-        <span id="second">55</span>
+      <div id="img-time-block">
+        <div id="time-block">
+          <div id="time-info">
+            <span id="hour">23</span>
+            <span class="colon">:</span>
+            <span id="minute">59</span>
+            <span class="colon">:</span>
+            <span id="second">55</span>
+          </div>
+          <br>
+          <i id="heartbeat" class="fas fa-heartbeat"></i>
+          <p id="num-rate">78</p>
+        </div>
+      
+        <img src="accessories/blue.png" alt="Smart Watch" id="smartwatch-skin">
       </div>
-          
-      <img src="accessories/blue.png" alt="Smart Watch" id="smartwatch-skin">
-      <i id="heartbeat" class="fas fa-heartbeat"></i>
-      <p id="num-rate">78</p>
     </aside>
     <section id="watch-desc">
       <h1 id="watch-heading">FitBit 19 - The Smartest Watch</h1>
@@ -44,7 +47,7 @@
       <h2 id="features">Features</h2>
       <span id="time" class="feature-class">Time</span>
       <span id="heart-rate" class="feature-class">Heart Rate</span>
-      <br>
+      <br><br>
       <input type="submit" id="btn-buynow" value="BUY NOW">
       <!-- <button id="btn-buynow"><strong>BUY NOW</strong></button> -->
     </section>

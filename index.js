@@ -6,9 +6,9 @@ var redSkin = document.getElementById('red')
 var blueSkin = document.getElementById('blue')
 var pinkSkin = document.getElementById('pink')
 var purpleSkin = document.getElementById('purple')
-var time = document.getElementById('time')
+var timeBtn = document.getElementById('time')
 var heartRate = document.getElementById('heart-rate')
-var timeBlock = document.getElementById('time-block')
+var time = document.getElementById('time-info')
 var heartbeat = document.getElementById('heartbeat')
 var numRate = document.getElementById('num-rate')
 
@@ -83,24 +83,24 @@ purpleSkin.addEventListener('click', function() {
   console.log('Mouse Click')
 })
 
-time.addEventListener('click', function() {
-  timeBlock.style.display = 'block'
+timeBtn.addEventListener('click', function() {
+  time.style.display = 'block'
   heartbeat.style.display = 'none'
   numRate.style.display = 'none'
 })
 
 heartRate.addEventListener('click', function() {
-  timeBlock.style.display = 'none'
+  time.style.display = 'none'
   heartbeat.style.display = 'block'
   numRate.style.display = 'block'
 
   setInterval(function() {
     if(secondsCount % 2 === 0) {
       heartbeat.style.transform = 'scale(1.1)'
+      console.log('Even')
     } else {
       heartbeat.style.transform = 'scale(1)'
+      console.log('Odd')
     }
-  }, 1000)
-
-  
+  }, 1000)  
 })
